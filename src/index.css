@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans tracking-normal;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-gradient-to-r from-nordik-orange to-nordik-peach text-nordik-navy font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border-2 border-nordik-navy text-nordik-navy font-semibold rounded-full hover:bg-nordik-navy hover:text-white transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply px-8 py-3 text-nordik-navy font-semibold rounded-full hover:bg-white/50 transition-all duration-300 cursor-pointer;
+  }
+
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-glass border border-white/20 rounded-3xl shadow-glass;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-nordik-orange via-nordik-pink to-nordik-purple bg-clip-text text-transparent;
+  }
+
+  .gradient-blur {
+    @apply absolute inset-0 bg-gradient-to-r from-nordik-peach/20 via-nordik-pink/20 to-nordik-lavender/20 blur-3xl -z-10 opacity-60;
+  }
+
+  .section-padding {
+    @apply px-4 md:px-8 py-16 md:py-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFB84D;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9933;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
